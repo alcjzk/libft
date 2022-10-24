@@ -1,5 +1,5 @@
 NAME = libft.a
-SRCS = ft_isalpha.c ft_isdigit.c
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 FLAGS = -Wall -Wextra -Werror
 
@@ -8,7 +8,7 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(OBJS): $(SRCS)
-	gcc $(FLAGS) -c $(SRCS) -o $(OBJS)
+	gcc $(FLAGS) -c $(SRCS)
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
