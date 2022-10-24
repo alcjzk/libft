@@ -7,13 +7,13 @@ FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(OBJS): $(SRCS)
-	gcc $(FLAGS) -c $(SRCS)
-
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
-clean: $(OBJS)
+%.o: %.c
+	gcc $(FLAGS) -c -o $@ $^
+
+clean:
 	rm -f $(OBJS)
 
 fclean: clean
