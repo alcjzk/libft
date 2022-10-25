@@ -27,8 +27,8 @@ int	main(void)
 	int	c;
 
 	c = -255;
-	while (c <= (int)UCHAR_MAX)
 	{
+	while (c <= (int)UCHAR_MAX)
 		if (!cmp_fn(c))
 		{
 			printf("TEST FAILED FOR c=%i\n", c);
