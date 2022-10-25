@@ -6,13 +6,13 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 10:53:29 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/25 10:58:55 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:02:02 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*result;
 
