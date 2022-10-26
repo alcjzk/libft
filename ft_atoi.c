@@ -6,49 +6,46 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:21:45 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/25 18:31:12 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:31:56 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include "limits.h"
+#include <limits.h>
 
-static int	ft_is_space(char c)
+static int	ft_trim_start(char **str)
 {
-	if (c == '\t' || c == '\n' || c == '\v')
-		return (1);
-	if (c == '\f' || c == '\r' || c == ' ')
-		return (1);
-	return (0);
+	char	c;
+
+	c = **str;
+	while ((c >= '\t' && c <= '\r') || c == ' ')
+		c = *(*str)++;
+	if (c == '+' || c == '-')
+		(*str)++;
+	while (**str == '0')
+		(*str)++;
+	return (c == '-');
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int negative;
-	long result;
+	char	c;
+	long	result;
+	int		negative;
 
 	result = 0;
-	negative = 0;
-	while (ft_is_space(*str))
-		str++;
-	if (*str == '+' && *str == '-')
-		negative = (*(str++) == '-');
-	while (*str >= '0' && *str <= '9' && result == 0)
-		result = result * 10 - *(str++) + 48;
-	while (*str >= '0' && *str <= '9')
+	negative = ft_trim_start(&str);
+	c = *str++;
+	while (ft_isdigit(c))
 	{
-		result = result * 10 - *(str++) + 48;
-		if (result >= 0)
-		{
-			if (negative)
-				return ((int)LONG_MIN);
+		result = result * 10 - c + 48;
+		if (negative && result >= 0)
+			return ((int)LONG_MIN);
+		if (!negative && result - 1 >= 0)
 			return ((int)LONG_MAX);
-		}
+		c = *str++;
 	}
 	if (negative)
 		return ((int)result);
-	if (result == LONG_MIN)
-		return ((int)LONG_MAX);
 	return ((int)-result);
 }
