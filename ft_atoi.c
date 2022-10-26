@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:21:45 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/26 12:31:56 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:35:02 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 	int		negative;
 
 	result = 0;
-	negative = ft_trim_start(&str);
+	negative = ft_trim_start((char **)&str);
 	c = *str++;
 	while (ft_isdigit(c))
 	{
