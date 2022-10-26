@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:58:58 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/24 16:49:59 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:23:39 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	main(void)
 	int	c;
 
 	c = -255;
-	{
 	while (c <= (int)UCHAR_MAX)
+	{
 		if (!cmp_fn(c))
 		{
 			printf("TEST FAILED FOR c=%i\n", c);
