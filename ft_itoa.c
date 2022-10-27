@@ -6,11 +6,12 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 19:34:30 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/26 20:36:21 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/27 21:14:37 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static char	*ft_itoa_strrev(char *s)
 {
@@ -22,7 +23,7 @@ static char	*ft_itoa_strrev(char *s)
 	i = 0;
 	len = ft_strlen(s);
 	max = len-- / 2;
-	while (i <= max)
+	while (i < max)
 	{
 		tmp = s[len];
 		s[len--] = s[i];
@@ -35,6 +36,8 @@ static int	ft_itoa_countdigits(int n)
 {
 	int	count;
 
+	if (n == 0)
+		return (1);
 	count = 0;
 	while (n != 0)
 	{
@@ -65,6 +68,8 @@ char	*ft_itoa(int n)
 	result = malloc(sizeof(char) * ft_itoa_countdigits(n) + 1 + negative);
 	if (!result)
 		return (NULL);
+	if (n == 0)
+		result[i++] = '0';
 	if (negative)
 	{
 		result[i++] = (char)(-(n % 10) + 48);

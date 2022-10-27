@@ -6,16 +6,19 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:24:54 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/26 19:33:18 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:44:52 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	ft_split_sectcount(char *s, char c)
 {
 	size_t	count;
 
+	if (!c)
+		return (0);
 	count = 0;
 	while (*s)
 	{
@@ -64,7 +67,7 @@ static char	*ft_split_sectseek(char *s, char delim, int skip)
 
 static void	*ft_split_unwind(char **arr, size_t count)
 {
-	while (count-- > 0)
+	while (count-- != (size_t)-1)
 		free(arr[count]);
 	free(arr);
 	return (NULL);
@@ -86,20 +89,23 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	char	*head;
 
+	if (!s)
+		return (NULL);
 	i = -1;
 	count = ft_split_sectcount((char *)s, c);
 	result = malloc(sizeof(char *) * (count + 1));
 	if (!result)
 		return (NULL);
+	result[count] = NULL;
+	if (!count)
+		return (result);
 	head = ft_split_sectseek((char *)s, c, 0);
 	while (++i < count)
 	{
 		result[i] = ft_split_sectcpy(head, c);
 		if (!result[i])
-			break ;
+			return (ft_split_unwind(result, (size_t)i));
 		head = ft_split_sectseek(head, c, 1);
 	}
-	if (i != count)
-		return (ft_split_unwind(result, i));
 	return (result);
 }

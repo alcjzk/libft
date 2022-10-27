@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:25:59 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/26 15:40:29 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/27 18:35:02 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*result;
 	size_t	size;
+	size_t	s_len;
 
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
 	size = len + 1;
 	result = malloc(sizeof(char) * size);
 	if (!result)
 		return (NULL);
+	if (start > s_len)
+		return (result);
 	ft_strlcpy(result, &s[start], size);
 	return (result);
 }

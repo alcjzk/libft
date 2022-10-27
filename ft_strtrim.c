@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:49:41 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/26 16:22:18 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/27 19:39:29 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,32 @@
 */
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	size_t	start;
+	size_t	end;
+	size_t	size;
 	char	*result;
-	char	*pos;
 
-	result = malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (!result)
+	if (!s1)
 		return (NULL);
-	pos = ft_strchr(set, *s1++);
-	while (pos && *pos)
-		pos = ft_strchr(set, *s1++);
-	while (!pos)
+	start = 0;
+	end = ft_strlen(s1);
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	if (start == end--)
+		size = 0;
+	else
 	{
-		pos = ft_strchr(set, *s1);
-		*(result++) = *s1++;
+		while (ft_strchr(set, s1[end]))
+			end--;
+		size = end - start + 1;
 	}
-	while (pos && *pos)
-		pos = ft_strchr(set, *s1++);
-	*result = '\0';
+	result = malloc(sizeof(char) * (size + 1));
+	if (result)
+	{
+		if (!size)
+			*result = '\0';
+		else
+			ft_strlcpy(result, &s1[start], size + 1);
+	}
 	return (result);
 }

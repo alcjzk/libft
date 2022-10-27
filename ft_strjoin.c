@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:41:15 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/26 15:48:31 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/27 19:39:59 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	size;
 	size_t	i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
 	result = malloc(sizeof(char) * size);
 	if (!result)
