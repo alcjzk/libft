@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 11:12:14 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/28 16:43:27 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 00:53:37 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		if ((unsigned char)c == c2)
 			return ((void *)--s);
 		if (!c2)
-			break;
+			break ;
 	}
 	return (NULL);
 }

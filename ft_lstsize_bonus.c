@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 17:06:23 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/28 17:09:40 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 00:53:57 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 **	Counts the number of nodes in a list.
 */
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	count;
 

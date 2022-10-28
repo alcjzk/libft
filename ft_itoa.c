@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 19:34:30 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/27 21:14:37 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 01:00:35 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,7 @@ char	*ft_itoa(int n)
 	int		i;
 
 	i = 0;
-	negative = 0;
-	if (n < 0)
-		negative = 1;
+	negative = (n < 0);
 	result = malloc(sizeof(char) * ft_itoa_countdigits(n) + 1 + negative);
 	if (!result)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 21:19:12 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/28 00:49:01 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 00:52:13 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n - 1 < 0)
 		return (ft_putnbr_fd(-n, fd));
 	ft_putnbr_fd(-(n / 10), fd);
-	ft_putnbr_fd(-(n % 10), fd);	
+	ft_putnbr_fd(-(n % 10), fd);
 }
