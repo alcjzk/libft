@@ -6,12 +6,11 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:21:45 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/26 12:35:02 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 02:11:23 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 static int	ft_trim_start(char **str)
 {
@@ -40,9 +39,9 @@ int	ft_atoi(const char *str)
 	{
 		result = result * 10 - c + 48;
 		if (negative && result >= 0)
-			return ((int)LONG_MIN);
+			return ((int)(((unsigned long) - 2 / 2)) + 1);
 		if (!negative && result - 1 >= 0)
-			return ((int)LONG_MAX);
+			return ((int)((unsigned long) - 2 / 2));
 		c = *str++;
 	}
 	if (negative)
