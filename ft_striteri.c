@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:51:11 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/26 20:57:19 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 00:40:18 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{
