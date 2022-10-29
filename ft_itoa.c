@@ -6,12 +6,11 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 19:34:30 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/29 01:00:35 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 20:47:29 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*ft_itoa_strrev(char *s)
 {

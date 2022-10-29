@@ -6,12 +6,11 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:49:41 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/29 01:26:07 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 20:49:01 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*
 **	Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters

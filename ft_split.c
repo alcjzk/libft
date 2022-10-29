@@ -6,12 +6,11 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:24:54 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/27 20:44:52 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/29 20:49:11 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_split_sectcount(char *s, char c)
 {
@@ -32,9 +31,6 @@ static size_t	ft_split_sectcount(char *s, char c)
 	return (count);
 }
 
-/*
-**	Assumes current position on a section and copies it into a new string.
-*/
 static char	*ft_split_sectcpy(char *s, char delim)
 {
 	size_t	len;
