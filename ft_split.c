@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:24:54 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/29 20:49:11 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:49:05 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static char	*ft_split_sectseek(char *s, char delim, int skip)
 
 static void	*ft_split_unwind(char **arr, size_t count)
 {
-	while (count-- != (size_t)-1)
+	while (--count != (size_t)-1)
 		free(arr[count]);
 	free(arr);
 	return (NULL);
