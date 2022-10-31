@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 11:12:14 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/29 00:53:37 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/31 23:36:15 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	c2;
-
 	while (n-- > 0)
-	{
-		c2 = *(unsigned char *)s++;
-		if ((unsigned char)c == c2)
+		if ((unsigned char)c == *((unsigned char *)s++))
 			return ((void *)--s);
-		if (!c2)
-			break ;
-	}
 	return (NULL);
 }
