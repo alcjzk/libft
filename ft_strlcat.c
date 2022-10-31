@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 10:00:43 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/27 17:32:25 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:57:34 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dst_len;
 	size_t	max;
 
-	if (!dstsize)
-		return (0);
+	dst_len = 0;
+	if (dst)
+		dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
-	if (dst_len > dstsize - 1)
+	if (dst_len >= dstsize)
 		return (src_len + dstsize);
 	max = dstsize - dst_len - 1;
 	head = &dst[dst_len];
