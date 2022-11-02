@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:21:45 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/29 02:11:23 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:37:54 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 static int	ft_trim_start(char **str)
 {
 	char	c;
+	int		negative;
 
 	c = **str;
 	while ((c >= '\t' && c <= '\r') || c == ' ')
-		c = *(*str)++;
-	if (c == '+' || c == '-')
-		(*str)++;
-	while (**str == '0')
-		(*str)++;
-	return (c == '-');
+		c = *(++(*str));
+	negative = (c == '-');
+	if (c == '+' || negative)
+		c = *(++(*str));
+	while (c == '0')
+		c = *(++(*str));
+	return (negative);
 }
 
 int	ft_atoi(const char *str)
