@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:25:59 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/27 18:35:02 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:37:17 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!result)
 		return (NULL);
 	if (start > s_len)
-		return (result);
+		return (ft_strdup(""));
 	ft_strlcpy(result, &s[start], size);
 	return (result);
 }
