@@ -13,7 +13,7 @@ ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 OBJS_BONUS = $(patsubst %.c,%.o,$(SRCS_BONUS))
-FLAGS = -Wall -Wextra -Werror
+override FLAGS += -Wall -Wextra -Werror
 
 .PHONY: all clean fclean re bonus
 
