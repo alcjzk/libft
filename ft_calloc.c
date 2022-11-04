@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:37:13 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/11/03 19:07:48 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/11/04 15:22:26 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!count || !size)
 		return (ft_calloc(1, 1));
 	size_full = count * size;
-	if (count / size != size_full)
+	if (size_full / size != count)
 		return (NULL);
 	result = malloc(size_full);
 	if (result)
