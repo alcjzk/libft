@@ -66,7 +66,10 @@ ft_lstdelone.c \
 ft_lstclear.c \
 ft_lstiter.c \
 ft_lstmap.c \
-ft_mempos.c
+ft_mempos.c \
+get_next_line.c \
+gnl_outbuf.c \
+gnl_readbuf.c
 
 # Compiler
 CC = cc
