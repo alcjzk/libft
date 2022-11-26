@@ -69,7 +69,8 @@ ft_lstmap.c \
 ft_mempos.c \
 get_next_line.c \
 gnl_outbuf.c \
-gnl_readbuf.c
+gnl_readbuf.c \
+ft_max.c
 
 # Compiler
 CC = cc

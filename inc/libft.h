@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:00:06 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/11/26 08:09:48 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/11/26 08:56:50 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 **	memory, or -1 if `c` is not found within `b` bytes.
 */
 ssize_t	ft_mempos(const void *s, unsigned char c, size_t n);
+
+/*
+**	Compares and returns the maximum of the given two values.
+*/
+int		ft_imax(int a, int b);
 
 #endif
