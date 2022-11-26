@@ -70,7 +70,8 @@ ft_mempos.c \
 get_next_line.c \
 gnl_outbuf.c \
 gnl_readbuf.c \
-ft_max.c
+ft_max.c \
+ft_abs.c
 
 # Compiler
 CC = cc
