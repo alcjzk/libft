@@ -6,13 +6,14 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:00:06 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/29 00:52:58 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/11/26 08:09:48 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <sys/types.h>
 
 typedef struct s_list
 {
@@ -63,5 +64,11 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/*
+**	Returns the position where byte `c` first appears in the given slice of
+**	memory, or -1 if `c` is not found within `b` bytes.
+*/
+ssize_t	ft_mempos(const void *s, unsigned char c, size_t n);
 
 #endif
