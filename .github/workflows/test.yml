@@ -1,0 +1,14 @@
+name: Test runner
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: test
+      run: echo "Hello"
