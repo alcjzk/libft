@@ -89,7 +89,7 @@ DEP = -MP -MMD
 # CONFIG #######################################################################
 ################################################################################
 
--include $(DEPS)
+
 vpath %.c src/
 .PHONY: all clean fclean re debug d
 override FLAGS += $(EXTRA) $(foreach DIR,$(INC_DIR),-I$(DIR)) $(OPT) $(DEP)
@@ -130,3 +130,5 @@ d: debug
 # Dir creation
 $(OBJ_DIR) $(TARGET_DIR):
 	@mkdir $@
+
+-include $(DEPS)
