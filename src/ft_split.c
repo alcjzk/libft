@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:24:54 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/10/31 14:49:05 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/12/02 17:36:29 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	ft_split_sectcount(char *s, char c)
 {
-	size_t	count;
+	size_t count;
 
 	if (!c)
 		return (0);
