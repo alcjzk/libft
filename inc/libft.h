@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:00:06 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/12/04 13:15:55 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/12/04 13:34:14 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <sys/types.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
