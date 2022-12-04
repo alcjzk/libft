@@ -74,7 +74,14 @@ ft_max.c \
 ft_abs.c \
 ft_tostr.c \
 fmtblock.c \
-ft_digits.c
+ft_digits.c \
+fmt.c \
+fmt_hex.c \
+fmt_int.c \
+fmt_parse.c \
+fmt_ptr.c \
+fmt_str.c \
+fmt_util.c
 
 # Compiler
 CC = cc
