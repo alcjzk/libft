@@ -73,7 +73,8 @@ gnl_readbuf.c \
 ft_max.c \
 ft_abs.c \
 ft_tostr.c \
-fmtblock.c
+fmtblock.c \
+ft_digits.c
 
 # Compiler
 CC = cc

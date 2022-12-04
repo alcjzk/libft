@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:00:06 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/11/26 08:59:58 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/12/04 13:15:55 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,17 @@ int				ft_imax(int a, int b);
 **	Returns the absolute value of the given integer.
 */
 unsigned int	ft_abs(int n);
+
+/*
+**	Returns the number of digits that appear in the given unsigned integer,
+**	when displayed in the given base.
+*/
+size_t			ft_udigits_base(unsigned int n, char base);
+
+/*
+**	Returns the number of digits that appear in the given pointer value,
+**	when displayed in hexadecimal format.
+*/
+size_t			ft_pdigits(uintptr_t n);
 
 #endif
