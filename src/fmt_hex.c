@@ -6,12 +6,13 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 07:12:13 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/12/04 13:20:24 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/12/04 13:24:33 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fmt.h"
 #include "libft.h"
+#include "tostr.h"
 
 static t_fmtblock	*fmt_lhex_impl(t_fmt *fmt, unsigned int n, int value_len)
 {

@@ -6,12 +6,13 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 07:58:17 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/12/04 13:20:04 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/12/04 13:25:09 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fmt.h"
 #include "libft.h"
+#include "tostr.h"
 
 static t_fmtblock	*fmt_ptr_impl(t_fmt *fmt, uintptr_t n, int value_len)
 {

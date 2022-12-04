@@ -6,12 +6,13 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:34:55 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/12/04 13:20:16 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2022/12/04 13:24:54 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fmt.h"
 #include "libft.h"
+#include "tostr.h"
 
 static const char	*prefix(t_fmt *fmt, int n)
 {
