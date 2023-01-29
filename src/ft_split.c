@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:55:18 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 01:40:06 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 01:42:10 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,10 @@ BOOL	ft_split(t_split *split, const char const *str, char delimeter)
 	if (!split->inner)
 		return (FALSE);
 	if (!create_split(split, str, delimeter))
+	{
+		ft_split_free(split);
 		return (FALSE);
+	}
 	return (TRUE);
 }
 
