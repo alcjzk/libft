@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:53:11 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 01:39:15 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 01:43:04 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ typedef struct s_split
 /// @param split Pointer to a split structure.
 /// @param str Input string.
 /// @param delimeter Delimiter used to split the string.
-/// @return `TRUE` on success, `FALSE` if an error occurred.
-// TODO: Document proper usage on error
+/// @return `TRUE` on success, `FALSE` if an allocation failed.
 BOOL	ft_split(t_split *split, const char const *str, char delimeter);
 
 /// @brief Deallocates the split structure.
