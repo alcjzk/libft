@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:55:18 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 01:19:21 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 01:40:06 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	ft_split_free(t_split *split)
 	}
 }
 
-void	ft_split_iter(t_split *split, void (*func)(char *substr))
+void	ft_split_iter(t_split *split, void (*func)(char *))
 {
 	size_t	idx;
 
@@ -97,5 +97,19 @@ void	ft_split_iter(t_split *split, void (*func)(char *substr))
 	while (idx < split->length)
 	{
 		func(split->inner[idx++]);
+	}
+}
+
+void	ft_split_iter_param(
+			t_split *split,
+			void (*func)(char *, void *),
+			void *param)
+{
+	size_t	idx;
+
+	idx = 0;
+	while (idx < split->length)
+	{
+		func(split->inner[idx++], param);
 	}
 }

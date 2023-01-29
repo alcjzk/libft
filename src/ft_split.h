@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:53:11 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 01:19:19 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 01:39:15 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,17 @@ void	ft_split_free(t_split *split);
 ///		substring.
 /// @param split Split to iterate.
 /// @param func Function called on each substring.
-void	ft_split_iter(t_split *split, void (*func)(char *substr));
+void	ft_split_iter(t_split *split, void (*func)(char *));
+
+/// @brief Iterates over substrings of the split and executes `func` on each
+///		substring. This version of the function passes an additional parameter
+///		to each function call.
+/// @param split Split to iterate.
+/// @param func Function called on each substring.
+/// @param param Parameter to pass for each function call.
+void	ft_split_iter_param(
+			t_split *split,
+			void (*func)(char *, void *),
+			void *param);
 
 #endif
