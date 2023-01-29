@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:53:11 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 01:00:25 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 01:13:15 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,9 @@ typedef struct s_split
 /// @return `TRUE` on success, `FALSE` if an error occurred.
 // TODO: Document proper usage on error
 BOOL	ft_split(t_split *split, const char const *str, char delimeter);
+
+/// @brief Deallocates the split structure.
+/// @param split Split to be freed.
+void	ft_split_free(t_split *split);
 
 #endif

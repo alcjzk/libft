@@ -6,10 +6,11 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:55:18 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 00:56:53 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 01:13:04 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 #include "ft_split.h"
 
@@ -64,4 +65,26 @@ BOOL	ft_split(t_split *split, const char const *str, char delimeter)
 	if (!create_split(split, str, delimeter))
 		return (FALSE);
 	return (TRUE);
+}
+
+void	ft_split_free(t_split *split)
+{
+	size_t	idx;
+
+	if (split && split->inner)
+	{
+		idx = 0;
+		while (idx < split->length)
+		{
+			if (split->inner[idx])
+			{
+				free(split->inner[idx]);
+				split->inner[idx++] = NULL;
+			}
+			idx++;
+		}
+		free(split->inner);
+		split->inner = NULL;
+		split->length = 0;
+	}
 }
