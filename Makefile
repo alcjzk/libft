@@ -82,7 +82,8 @@ fmt_ptr.c \
 fmt_str.c \
 fmt_util.c \
 ft_printf.c \
-ft_split.c
+ft_split.c \
+ft_split_impl.c
 
 # Compiler
 CC = cc
