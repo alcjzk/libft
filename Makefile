@@ -9,7 +9,7 @@ INC_DIR = inc/
 OBJ_DIR = obj/
 
 # Sources
-SRC_DIR = src/
+SRC_DIR = $(sort $(dir $(wildcard src/*/))) src/
 
 # Target directory
 TARGET_DIR = ./
@@ -103,7 +103,11 @@ DEP = -MP -MMD
 
 vpath %.c src/
 .PHONY: all clean fclean re debug d
-override FLAGS += $(EXTRA) $(foreach DIR,$(INC_DIR),-I$(DIR)) $(OPT) $(DEP)
+
+# Find header files in any INC_DIR or SRC_DIR
+I = $(SRC_DIR:%=-I%) $(INC_DIR:%=-I%)
+
+override FLAGS += $(EXTRA) $I $(OPT) $(DEP)
 OBJS = $(SRCS:%.c=$(OBJ_DIR)%.o)
 DEPS = $(SRCS:%.c=$(OBJ_DIR)%.d)
 
