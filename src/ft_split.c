@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:55:18 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 01:42:10 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 01:43:52 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ BOOL	ft_split(t_split *split, const char const *str, char delimeter)
 	split->inner = NULL;
 	split->length = split_length((char *)str, delimeter);
 	if (split->length == 0)
-		return (FALSE);
+		return (TRUE);
 	split->inner = ft_calloc(split->length, sizeof(char *));
 	if (!split->inner)
 		return (FALSE);
