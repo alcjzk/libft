@@ -6,10 +6,11 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 01:48:55 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 01:51:21 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 03:09:34 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "ft_split_impl.h"
 
 size_t	split_length(char *str, char delimeter)

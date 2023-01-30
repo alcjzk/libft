@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:55:18 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 01:50:09 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 03:09:18 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "ft_split_impl.h"
 #include "ft_split.h"
 
-BOOL	ft_split(t_split *split, const char const *str, char delimeter)
+BOOL	ft_split(t_split *split, char const *str, char delimeter)
 {
 	split->inner = NULL;
 	split->length = split_length((char *)str, delimeter);
@@ -24,7 +24,7 @@ BOOL	ft_split(t_split *split, const char const *str, char delimeter)
 	split->inner = ft_calloc(split->length, sizeof(char *));
 	if (!split->inner)
 		return (FALSE);
-	if (!create_split(split, str, delimeter))
+	if (!create_split(split, (char *)str, delimeter))
 	{
 		ft_split_free(split);
 		return (FALSE);
