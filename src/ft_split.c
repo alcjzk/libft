@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 23:55:18 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/01/30 03:09:18 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/01/30 03:22:18 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ft_split_free(t_split *split)
 			if (split->inner[idx])
 			{
 				free(split->inner[idx]);
-				split->inner[idx++] = NULL;
+				split->inner[idx] = NULL;
 			}
 			idx++;
 		}
