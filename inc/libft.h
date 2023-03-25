@@ -6,15 +6,17 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:00:06 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/03/23 20:29:34 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/03/25 07:02:25 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <sys/types.h>
 # include <stdint.h>
+# include "bool.h"
 
 typedef struct s_list
 {
@@ -109,5 +111,13 @@ size_t			ft_udigits_base(unsigned int n, char base);
 **	when displayed in hexadecimal format.
 */
 size_t			ft_pdigits(uintptr_t n);
+
+long long		ft_strtonum(
+					const char *str,
+					long long min,
+					long long max,
+					const char **errstr);
+
+BOOL			ft_isspace(char c);
 
 #endif
