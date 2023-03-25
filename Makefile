@@ -1,25 +1,11 @@
-################################################################################
-# DIRECTORIES ##################################################################
-################################################################################
+# Targets
+NAME = $(BIN_DIR)libft.a
 
-# Includes
-INC_DIR = inc/
-
-# Objects and dependencies
-OBJ_DIR = obj/
-
-# Sources
-SRC_DIR = src/
-
-# Target directory
-TARGET_DIR = ./
-
-################################################################################
-# BASIC ########################################################################
-################################################################################
-
-# Target name
-NAME = $(TARGET_DIR)libft.a
+# Directories
+SRC_DIR		= $(sort $(dir $(wildcard src/*/))) src/
+INC_DIR		= inc/ $(SRC_DIR)
+OBJ_DIR		= obj/
+BIN_DIR		= ./
 
 # Sources
 SRCS = \
@@ -85,26 +71,20 @@ fmt_str.c \
 fmt_util.c \
 ft_printf.c
 
-# Compiler
-CC = cc
+# Flags setup
+CC				= cc
+OPT				= 3
+WARN			= all extra error
+override EXTRA	+= -MP -MMD
 
-# Optimization flags
-OPT =
-
-# Extra flags
-EXTRA = -Wall -Werror -Wextra
-
-# Depflags
-DEP = -MP -MMD
+# Compiler flags
+override CFLAGS 	+= $(EXTRA) $(OPT:%=-O%) $(INC_DIR:%=-I%) $(WARN:%=-W%)
 
 ################################################################################
 # CONFIG #######################################################################
 ################################################################################
 
-
-vpath %.c src/
 .PHONY: all clean fclean re debug d
-override FLAGS += $(EXTRA) $(foreach DIR,$(INC_DIR),-I$(DIR)) $(OPT) $(DEP)
 OBJS = $(SRCS:%.c=$(OBJ_DIR)%.o)
 DEPS = $(SRCS:%.c=$(OBJ_DIR)%.d)
 
@@ -117,10 +97,10 @@ all: $(NAME)
 
 # Objects
 $(OBJS): $(OBJ_DIR)%.o: %.c | $(OBJ_DIR)
-	$(CC) $(FLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 # Target
-$(NAME): $(OBJS) | $(TARGET_DIR)
+$(NAME): $(OBJS) | $(BIN_DIR)
 	ar -rcs $@ $?
 
 # Cleanup
@@ -140,7 +120,8 @@ re: fclean all
 d: debug
 
 # Dir creation
-$(OBJ_DIR) $(TARGET_DIR):
+$(OBJ_DIR) $(BIN_DIR):
 	@mkdir $@
 
+vpath %.c src/
 -include $(DEPS)
