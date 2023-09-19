@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:32:26 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/12/04 13:20:10 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:49:45 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	fmt_parse_width(const char **format)
 
 	width = ft_atoi(*format);
 	while (ft_isdigit(**format) || **format == '-')
-			(*format)++;
+		(*format)++;
 	return (width);
 }
 

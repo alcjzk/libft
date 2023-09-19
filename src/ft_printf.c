@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:45:51 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/12/04 13:26:20 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:50:05 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <unistd.h>
 
 int	ft_printf(const char *format, ...)
-{	
+{
 	va_list	ap;
 	int		len;
 
