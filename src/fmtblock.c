@@ -6,14 +6,14 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 13:13:07 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/12/04 13:13:26 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:14:11 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "fmtblock.h"
 
-t_fmtblock	*fmtblock_new(char *p, size_t len, BOOL dynamic)
+t_fmtblock	*fmtblock_new(char *p, size_t len, _Bool dynamic)
 {
 	t_fmtblock	*block;
 

@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 01:29:39 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/11/26 08:48:05 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:14:11 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_gnl_readbuf	*gnl_readbuf_from_fd(int fd);
 void			gnl_readbuf_clear(t_gnl_readbuf **buf);
 t_gnl_outbuf	*gnl_outbuf_new(void);
 char			*gnl_outbuf_to_string(t_gnl_outbuf *buf);
-BOOL			gnl_outbuf_append(
+_Bool			gnl_outbuf_append(
 					t_gnl_outbuf **buf_out,
 					t_gnl_readbuf **buf_read,
 					size_t n);

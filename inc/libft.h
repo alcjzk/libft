@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:00:06 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/03/25 07:02:25 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:14:11 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,6 @@ long long		ft_strtonum(
 					long long max,
 					const char **errstr);
 
-BOOL			ft_isspace(char c);
+_Bool			ft_isspace(char c);
 
 #endif

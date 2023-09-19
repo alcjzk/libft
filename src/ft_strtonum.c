@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:44:03 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/03/25 07:02:01 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:14:11 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #define ERR_TOOLARGE "The result was larger than the provided maximum value."
 
 // Boolean return type for _trim_start.
-typedef BOOL	t_is_negative;
+typedef _Bool	t_is_negative;
 
 ///						Trims the beginning of the string by incrementing the 
 ///						string pointer, returning a boolean describing if the 
@@ -49,7 +49,7 @@ long long	ft_strtonum(
 	long long max,
 	const char **errstr)
 {
-	BOOL		negative;
+	_Bool		negative;
 
 	if (errstr)
 		*errstr = NULL;

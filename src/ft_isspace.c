@@ -6,13 +6,13 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:36:14 by tjaasalo          #+#    #+#             */
-/*   Updated: 2023/03/25 07:01:00 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:14:11 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-BOOL	ft_isspace(char c)
+_Bool	ft_isspace(char c)
 {
 	if ((c >= '\t' && c <= '\r') || c == ' ')
 		return (TRUE);

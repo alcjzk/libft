@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 13:17:58 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/12/04 13:18:26 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:14:11 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ t_fmtblock	*fmt_lhex(t_fmt *fmt, va_list ap);
 t_fmtblock	*fmt_char(t_fmt *fmt, va_list ap);
 t_fmtblock	*fmt_literal(void);
 
-BOOL		fmt_leftalign(t_fmt *fmt);
-BOOL		fmt_zeropad(t_fmt *fmt);
-BOOL		fmt_signpad(t_fmt *fmt);
-BOOL		fmt_forcesign(t_fmt *fmt);
-BOOL		fmt_alternate(t_fmt *fmt);
+_Bool		fmt_leftalign(t_fmt *fmt);
+_Bool		fmt_zeropad(t_fmt *fmt);
+_Bool		fmt_signpad(t_fmt *fmt);
+_Bool		fmt_forcesign(t_fmt *fmt);
+_Bool		fmt_alternate(t_fmt *fmt);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tjaasalo <tjaasalo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 08:37:42 by tjaasalo          #+#    #+#             */
-/*   Updated: 2022/11/26 08:51:21 by tjaasalo         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:14:11 by tjaasalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*gnl_outbuf_to_string(t_gnl_outbuf *buf)
 	return (output);
 }
 
-BOOL	gnl_outbuf_append(
+_Bool	gnl_outbuf_append(
 	t_gnl_outbuf **buf_out,
 	t_gnl_readbuf **buf_read,
 	size_t n)
